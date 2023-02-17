@@ -1,5 +1,5 @@
 -- Imports
-require("lua/skeleton")
+require("skeleton")
 -- Variables
 local set = vim.opt
 local cfgpath = vim.fn.stdpath('config')
