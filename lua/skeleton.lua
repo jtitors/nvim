@@ -1,19 +1,12 @@
 -- Variables
-local cfgpath = vim.fn.stdpath('config')
-local skeletons = cfgpath.."/skeletons/skeleton"
+local cfgpath = vim.fn.stdpath('config') -- Get the config path
+local skeletons = cfgpath.."/skeletons/skeleton.<afile>:e" -- Get the skeleton based on file extension
 
 -- Skeletons
 vim.api.nvim_create_autocmd("BufNewFile", {
-	pattern = "*.py",
+	pattern = "*.*",
 	group = 
 	vim.api.nvim_create_augroup("skeletons", { clear = true}),
-	command = string.format("0r %s.py", skeletons)
-})
-
-vim.api.nvim_create_autocmd("BufNewFile", {
-	pattern = "*.html",
-	group = 
-	vim.api.nvim_create_augroup("skeletons", { clear = true}),
-	command = string.format("0r %s.html", skeletons)
+	command = string.format("silent! 0r %s.", skeletons)
 })
 
