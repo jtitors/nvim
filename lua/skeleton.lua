@@ -7,6 +7,6 @@ vim.api.nvim_create_autocmd("BufNewFile", {
 	pattern = "*.*",
 	group = 
 	vim.api.nvim_create_augroup("skeletons", { clear = true}),
-	command = string.format("0r %s", skeletons)
+	command = string.format("silent! 0r %s", skeletons)
 })
 

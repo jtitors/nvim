@@ -1,5 +1,7 @@
 -- Imports
 require("skeleton")
+require("plugins")
+require("colorscheme")
 -- Variables
 local set = vim.opt
 local cfgpath = vim.fn.stdpath('config')
